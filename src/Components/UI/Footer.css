@@ -1,0 +1,105 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: black;
+    text-align: center; /* centers the text of all footer columns */
+    color: white;
+}
+
+.footer-logo {
+    display: block;
+    margin-bottom: 20px;
+    text-align: center;
+    width: 50%;  /* set the width of the logo container to half the width of the footer */
+    margin: 0 auto; /* center the logo container */
+}
+
+.footer-logo img {
+    width: 100%; /* make the logo image take the full width of its container */
+    max-width: 250px; /* limit the maximum width of the logo image to avoid it becoming too large on big screens */
+    height: auto;
+}
+
+.footer-hours,
+.footer-nav,
+.footer-location,
+.footer-admin {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+/* added styles to layout nav links in a column */
+.footer-nav a {
+    display: block;
+    margin: 5px 0;
+}
+
+@media (min-width: 500px) {
+    .footer {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .footer-logo {
+        order: -1;
+        flex-basis: 100%;
+    }
+
+    .footer-hours,
+    .footer-admin {
+        flex-basis: 45%;
+    }
+
+    .footer-nav,
+    .footer-location {
+        flex-basis: 45%;
+    }
+
+    .footer-hours {
+        order: 1;
+    }
+
+    .footer-admin {
+        order: 2;
+    }
+
+    .footer-nav {
+        order: 3;
+    }
+
+    .footer-location {
+        order: 4;
+    }
+}
+
+@media (min-width: 800px) {
+    .footer-logo {
+        display: none;
+    }
+
+    .footer-hours,
+    .footer-nav,
+    .footer-location,
+    .footer-admin {
+        flex-basis: 23%;
+    }
+
+    .footer-hours {
+        order: 1;
+    }
+
+    .footer-nav {
+        order: 2;
+    }
+
+    .footer-location {
+        order: 3;
+    }
+
+    .footer-admin {
+        order: 4;
+    }
+}

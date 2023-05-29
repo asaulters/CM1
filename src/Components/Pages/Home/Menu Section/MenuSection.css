@@ -1,0 +1,58 @@
+.menu-section {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px auto;
+    padding: 20px;
+    /* border: 1px solid #ddd; */
+    border-radius: 10px;
+    /* background-color: #f9f9f9; */
+    width: 75vw;
+}
+
+.menu-content {
+    order: 2;
+    text-align: center;
+    margin-top: 20px;
+    flex: 1;
+
+}
+
+.menu-content button {
+    background-color: #cc5500;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100px; /* adjust the width of the button here */
+}
+
+.menu-image {
+    order: 1;
+    flex: 1;
+}
+
+.menu-image img {
+    max-width: 800px;
+    width: 100%;
+    height: auto;
+}
+
+@media (min-width: 768px) {
+    .menu-section {
+        flex-direction: row;
+        width: 85vw;
+    }
+    
+    .menu-content {
+        order: 2;
+        text-align: left;
+        margin-left: 20px;
+    }
+
+    .menu-image {
+        order: 1;
+    }
+}

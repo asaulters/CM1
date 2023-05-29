@@ -1,0 +1,79 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10%;
+    height: 60px;  /* adjusted height */
+    background-color: black;
+}
+
+.logo {
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.logo img {
+    max-height: 90%;
+    max-width: 150px; 
+    height: 90%;
+    width: 50%;/* added max-width */
+    object-fit: contain;
+}
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.menu-icon {
+    display: none;
+    cursor: pointer;
+    color: #fff;
+    font-size: 24px;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        position: fixed;
+        top: 10%;  /* Adjust this value to change the starting position of the dropdown menu */
+        left: 0;
+        right: 0;
+        bottom: 0; /* This allows the menu to take up the remaining space below the starting point */
+        background-color: black;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        width: 100%;
+        transform: translateY(-100%);
+        transition: transform 0.5s ease-in-out;
+        display: none;
+    }
+
+    .nav-links.active {
+        display: flex;
+        transform: translateY(0%);
+    }
+
+    .menu-icon {
+        display: block;
+    }
+}

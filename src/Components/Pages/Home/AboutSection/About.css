@@ -1,0 +1,47 @@
+#about-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px auto;
+    padding: 20px;
+    /* border: 1px solid #ddd; */
+    border-radius: 10px;
+    /* background-color: #f9f9f9; */
+    width: 75vw;
+}
+
+#about-section-writeup {
+    order: 1;
+    text-align: center;
+    margin-bottom: 20px;
+    flex: 1; /* this makes the writeup take up an equal amount of space as the image */
+}
+
+#about-Img {
+    order: 2;
+    flex: 1; /* this makes the image take up an equal amount of space as the writeup */
+}
+
+#about-Img img {
+    max-width: 800px;
+    width: 100%;
+    height: auto;
+}
+
+@media (min-width: 768px) {
+    #about-section {
+        flex-direction: row;
+        width: 85vw;
+    }
+    
+    #about-section-writeup {
+        order: 1;
+        text-align: left;
+        margin-right: 20px;
+    }
+
+    #about-Img {
+        order: 2;
+    }
+}
